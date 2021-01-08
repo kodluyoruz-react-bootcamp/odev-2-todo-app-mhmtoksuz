@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react';
 
 function Fouter({todos, setTodos}) {
 	const removeAll = ()=>{
