@@ -1,6 +1,6 @@
 import './App.css';
 import {useState} from "react";
-import UserList from './components/UserList';
+import UserList from './components/userlist/UserList';
 import Header from './components/header/Header'
 
 function App() {

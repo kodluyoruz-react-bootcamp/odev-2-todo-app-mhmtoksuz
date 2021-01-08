@@ -20,16 +20,20 @@ function UserList({todos,setTodos}) {
         setTodos(filtered);
       };
     return (
-        <>
-        <ul>
-            {todos.map((todo,i)=>(
-            <li key={i}>{i+1} - {todo.todo} <span onClick={()=>handleRemove(todo.id)} style={{color:"blue", cursor:'pointer'}}>(x)</span>
+        <section className="main">
+        <ul className="todo-list">
+        {todos.map((todo,i)=>(
+              <li className="completed" key={i}> 
+              <div className="view">
+                  <input className="toggle" type="checkbox"></input> <label>{todo.todo}</label> <button className="destroy" onClick={()=>handleRemove(todo.id)}>X</button>
+              </div>
             </li>
-            ))}
+          ))}
           </ul>
-        <input value={todo} onChange={handleChangeTodo} ></input>
+
+        <input value={todo} onChange={handleChangeTodo} placeholder="What needs to be done?"></input>
         <button onClick={handleClick}>Ekle</button>
-        </>
+        </section>
     )
 }
 
