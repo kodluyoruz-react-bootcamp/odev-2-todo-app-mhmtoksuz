@@ -7,7 +7,7 @@ import Fouter from './components/fouter/Fouter';
 function App() {
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([
-    {id:1,todo:"Ödevi Yap",active:true}
+    {id:1,todo:"Ödevi Yap",active:false}
     ]);
   
 
@@ -16,7 +16,7 @@ function App() {
       <Header></Header>
       {todo}
       <UserList todos={todos} setTodos={setTodos}></UserList>
-      <Fouter></Fouter>
+      <Fouter todos={todos} setTodos={setTodos}></Fouter>
     </section>
   );
 }

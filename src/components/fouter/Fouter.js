@@ -1,10 +1,13 @@
 import React from 'react'
 
-function Fouter() {
+function Fouter({todos, setTodos}) {
+	const removeAll = ()=>{
+		setTodos([]);
+	};
     return (
         <footer className="footer">
 		<span className="todo-count">
-			<strong>2</strong>
+			<strong>{todos.length} </strong>
 			items left
 		</span>
 
@@ -20,7 +23,7 @@ function Fouter() {
 			</li>
 		</ul>
 
-		<button className="clear-completed">
+		<button className="clear-completed" onClick={()=>removeAll(setTodos)}>
 			Clear completed
 		</button>
 	</footer>

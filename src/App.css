@@ -68,9 +68,9 @@ body {
 	color: #e6e6e6;
 }
 
-.todoapp h1 {
-	position: absolute;
-	top: -155px;
+h1 {
+
+	top: 100px;
 	width: 100%;
 	font-size: 100px;
 	font-weight: 100;
@@ -219,6 +219,11 @@ body {
 .todo-list li.completed label {
 	color: #d9d9d9;
 	text-decoration: line-through;
+}
+
+.ustcizme{
+  color:black;
+  text-decoration: line-through;
 }
 
 .todo-list li .destroy {
