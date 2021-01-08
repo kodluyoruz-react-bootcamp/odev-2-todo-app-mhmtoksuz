@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 
 
+
 function UserList({todos,setTodos}) {
     
     const [todo, setTodo] = useState("");
@@ -21,18 +22,19 @@ function UserList({todos,setTodos}) {
       };
     return (
         <section className="main">
+        <input className="new-todo" value={todo} onChange={handleChangeTodo} placeholder="What needs to be done?"></input>
+        <button onClick={handleClick}>Ekle</button>
         <ul className="todo-list">
         {todos.map((todo,i)=>(
               <li className="completed" key={i}> 
               <div className="view">
-                  <input className="toggle" type="checkbox"></input> <label>{todo.todo}</label> <button className="destroy" onClick={()=>handleRemove(todo.id)}>X</button>
+                  <input className="toggle" type="checkbox"></input> <label>{todo.todo}</label> <button className="destroy" onClick={()=>handleRemove(todo.id)}></button>
               </div>
             </li>
           ))}
           </ul>
 
-        <input value={todo} onChange={handleChangeTodo} placeholder="What needs to be done?"></input>
-        <button onClick={handleClick}>Ekle</button>
+
         </section>
     )
 }
